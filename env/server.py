@@ -13,16 +13,6 @@ app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
 mysql = MySQL(app)
 
-""" @app.route('/')
-def index():
-    cur = mysql.connection.cursor()
-    cur.execute('''CREATE TABLE patient (id INTEGER,
-                fName VARCHAR(20), lName VARCHAR(20), iName VARCHAR(20),
-                email VARCHAR(255), phone VARCHAR(15), dob DATE, SEX VARCHAR(10),
-                gender VARCHAR(20), mStatus VARCHAR(40), pLanguage VARCHAR(20))''')
-
-    return 'Done!' """
-
 @app.route('/test')
 def test():
     return {"test": ['foo', 'bar', 'baz']}
